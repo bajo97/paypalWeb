@@ -11,17 +11,9 @@
 
   //document.getElementById("host").innerHTML = host;
 
-var url = new URL(window.location.host);
-  
-var host = url.host;
+const urlParams = new URLSearchParams(window.location.host);
 
-var params = url.searchParams;
-
-params.forEach(function(value, key) {
-  console.log("Parámetro: " + key + " = " + value);
-});
-
-
+console.log(urlParams.get("paymentId"))
   
 </script>
 
