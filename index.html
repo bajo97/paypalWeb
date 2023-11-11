@@ -5,16 +5,14 @@
 </head>
 <body>
 
-<p>El host de la página es: <span id="host"></span></p>
+<p>pega esto en la opcion /pay : <span id="paypal"></span></p>
 
 <script>
 
-  //document.getElementById("host").innerHTML = host;
-
 const urlParams = new URLSearchParams(window.location.search);
 
-console.log(urlParams.get("paymentId"))
-  
+document.getElementById("paypal").innerHTML = `${urlParams.get("paymentId")}&${urlParams.get("PayerID")}`;
+
 </script>
 
 </body>
